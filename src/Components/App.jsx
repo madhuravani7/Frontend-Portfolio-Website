@@ -1,9 +1,25 @@
-import React from "react"
+import React from 'react';
+import Header from './Header';
+import Home from './Home/Home';
+import About from './About';
+import Projects from './Projects';
+import Skills from './Skills';
+import Contact from './Contact';
+import Footer from './Footer';
 
-function App(){
-    return <div>
-            <h1>Hello Me</h1>
-           </div>
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Skills />
+      <Contact />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
