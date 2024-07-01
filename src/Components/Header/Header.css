@@ -1,51 +1,99 @@
 header {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     font-family: "Lato", sans-serif;
-    
-  }
+    padding: 10px 20px;
+}
 
-  .logo{
+.logo {
     flex: 1;
-    margin-left: 1rem; /*need it to make it responsive*/
-  }
-  .logo span{
+    margin-left: 1rem; /* Needed to make it responsive */
+}
+
+.logo span {
     font-weight: bold;
-    color: #5e548e;
-  }
-  .nav-wrapper {
+    color: #582f0e;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.nav-wrapper {
     flex: 3;
     display: flex;
-    justify-content: flex-start; /* Align items to start */
+    justify-content: flex-end; /* Align items to the right */
     padding-left: 10%; /* Adjust to shift the nav content to the left */
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align items to the right */
     width: 100%;
     margin-left: 5%;
-  }
-  nav ul {
+}
+
+nav ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin-right: 1rem;
     padding-left: 10%;
-  }
-  
-  nav ul li a {
-    
-    text-decoration: none;
-    color: #5e548e;
-  }
-  nav ul li a:hover {
+}
 
+nav ul li a {
+    text-decoration: none;
+    color: #582f0e;
+}
+
+nav ul li a:hover {
     color: white;
     font-size: 1.1rem;
-  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 20px; /* Positioning the toggle button to the right */
+    }
+
+    .nav-wrapper {
+        display: none; /* Hide by default on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .nav-wrapper.visible {
+        display: block; /* Show when the toggle button is clicked */
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start
+        /* Align items to the left */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+        padding-left: 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+}
