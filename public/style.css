@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d4bbfc;
+  }
+  .App{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+  }
+  
+  footer {
+
+    color: #9667e0;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  
+
+    /*
+  colors: 
+  #ff99ac light pink
+  background-color:#d4bbfc ; header background
+  footer background: 
+  */

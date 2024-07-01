@@ -1,0 +1,22 @@
+.about{
+    background-color: #d4bbfc;
+    width: 100%;
+    height: 93%;
+   
+}
+
+h1{
+    color: #5e548e;
+    font-family: "Poppins", sans-serif;
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5e548e;
+}
+
+.info{
+    color:#5e548e
+}
