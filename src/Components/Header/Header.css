@@ -1,0 +1,51 @@
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    
+  }
+
+  .logo{
+    flex: 1;
+    margin-left: 1rem; /*need it to make it responsive*/
+  }
+  .logo span{
+    font-weight: bold;
+    color: #5e548e;
+  }
+  .nav-wrapper {
+    flex: 3;
+    display: flex;
+    justify-content: flex-start; /* Align items to start */
+    padding-left: 10%; /* Adjust to shift the nav content to the left */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 5%;
+  }
+  nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-right: 1rem;
+    padding-left: 10%;
+  }
+  
+  nav ul li a {
+    
+    text-decoration: none;
+    color: #5e548e;
+  }
+  nav ul li a:hover {
+
+    color: white;
+    font-size: 1.1rem;
+  }

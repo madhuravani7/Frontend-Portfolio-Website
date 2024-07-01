@@ -1,19 +1,28 @@
-import React from 'react';
-import Header from './Header';
+import React, {useState} from 'react';
+import Header from './Header/Header';
 import Home from './Home/Home';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
-import Contact from './Contact';
+import Projects from './Projects/Projects';
+import Skills from './Skills/Skills';
+import Contact from './Contact/Contact';
 import Footer from './Footer';
 
 
 function App() {
+
+const [isFlipped, setFlipped] = useState("false")
+
+function handleFlip(){
+  setFlipped(!isFlipped)
+}
+
+function handleNavClick(){
+  setFlipped(true)
+}
+
   return (
     <div className="App">
-      <Header />
-      <Home />
-      <About />
+      <Header onAboutClick={handleNavClick}/>
+      <Home isFlipped={isFlipped} onFlip={handleFlip}/>
       <Projects />
       <Skills />
       <Contact />

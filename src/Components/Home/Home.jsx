@@ -1,18 +1,27 @@
 import React from 'react';
+import About from '../About/About'
+import Avatar from './avatar'
 import './Home.css'; 
-function Home() {
+
+
+
+function Home({isFlipped, onFlip}) {
+
   return (
-    <div id="home">
-        <div id="home-card">
+    <div id="home" onClick={onFlip}>
+      <div className={`home-inner ${isFlipped? 'flipped': ''}`}>
+        <div id="home-front">
           <div class="right-content">
-            <h2>Madhuravani Budige.</h2>
+            <h1>Madhuravani Budige.</h1>
             <p>I'm a Frontend Developer.</p>
           </div>
-          <div class="avatar">
-            <img src={process.env.PUBLIC_URL + '/images/madhu.jpeg'} alt='pfp'/>
-          </div>
+          <Avatar/>
         </div>
-    </div>
+        <div id="home-back">
+          <About/>
+        </div>
+      </div>
+  </div>
   );
 }
 
