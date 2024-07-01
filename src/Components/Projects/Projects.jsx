@@ -1,36 +1,22 @@
 import React from 'react';
-import './Projects.css'
+import './Projects.css';
+import projectdetails from './Projectdetails';
+
 function Projects() {
   return (
-    <div id="projects">
-      <h2>Projects that I've worked on so far...</h2>
+    <div id='projects'>
+      <h2>Projects I've worked on so far...</h2>
       <div id='projects-tab'>
-          <div className='child'>
+        {projectdetails.map(({ src, alt, heading, description }, index) => (
+          <div className='child' key={index}>
             <div className='image-wrapper'>
-               <img src={process.env.PUBLIC_URL + '/images/madhu.jpeg'} alt='project2'/>
-            </div>
-            <h3>Blog Page</h3>
-            <p>Used CRUD </p>
+              <img src={src} alt={alt} />
+              </div>
+              <h3>{heading}</h3>
+              <p>{description}</p>
           </div>
-
-          <div className='child'>
-            <div className='image-wrapper'>
-               <img src={process.env.PUBLIC_URL + '/images/madhu.jpeg'} alt='project2'/>
-            </div>
-            <h3>Keeper App</h3>
-            <p>Description of project 2.</p>
-          </div>
-
-          <div className='child'>
-            <div className='image-wrapper'>
-               <img src={process.env.PUBLIC_URL + '/images/madhu.jpeg'} alt='project2'/>
-            </div>
-            <h3>To Do List</h3>
-            <p>Description of project 3.</p>
-          </div>
+        ))}
       </div>
-
-     
     </div>
   );
 }

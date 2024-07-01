@@ -1,7 +1,7 @@
 #skills{
 
     width: 100%;
-    height: 100vh;
+    height: auto;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -19,17 +19,19 @@
     margin-top: 5%;
 }
 
-h2{
-    color: #5e548e;
+.skills h2{
+    color: #582f0e;
 }
 
 .image-container .image img{
  
     width: 100%;
     height: auto;
+    
 }
 .image{
     padding: 10px;
     width: 80px;
     height: 100px;
+    object-fit: cover;
 }

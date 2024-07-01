@@ -1,13 +1,22 @@
-// src/components/Header.jsx
-import React from 'react';
-import './Header.css'
-function Header({onAboutClick}) {
+import React, { useState } from 'react';
+import './Header.css';
+
+function Header({ onAboutClick }) {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+
   return (
     <header>
       <div className="logo">
         <span>madhu.</span>
       </div>
-      <div className="nav-wrapper">
+      <div className="nav-toggle" onClick={toggleNav}>
+        ☰
+      </div>
+      <div className={`nav-wrapper ${isNavVisible ? 'visible' : ''}`}>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>
